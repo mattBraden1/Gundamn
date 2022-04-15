@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 727421790341173540}
   - component: {fileID: 727421790341173539}
   - component: {fileID: 727421790341173541}
+  - component: {fileID: 4972762501470989378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -141,4 +142,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBullet: {fileID: 1286622155801723247, guid: 18c1a6cff4a3ed547a78b5bd4b463cef, type: 3}
-  fireRate: 2
+  fireRate: 10
+--- !u!114 &4972762501470989378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727421790341173550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc822b108320898478a1d5b62e1edf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  currentHealth: 0
+  iFrame: 50
