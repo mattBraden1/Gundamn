@@ -182,10 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d4b6cd9a91e9c44acff19672115eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 412820859}
-  player: {fileID: 2041584976}
-  speed: 100
-  bulletImpulse: 20
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
   fireRate: 100
 --- !u!114 &675890483 stripped
@@ -703,11 +699,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &2041584976 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6814557882679296772, guid: da6934ffa244d5f409c7529aa5e28795, type: 3}
-  m_PrefabInstance: {fileID: 727421789712314440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &727421789712314440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,6 +844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6629561512129060263, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6629561512129060263, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: points.Array.size
       value: 4
