@@ -7,7 +7,7 @@ public class EnemyTrack : MonoBehaviour
     [SerializeField]
     private GameObject[] points;
     [SerializeField]
-    private float speed = 1;
+    private float speed = 1.0f;
     private int curPos = 0;
     private bool continueRunning = true;
     // Start is called before the first frame update

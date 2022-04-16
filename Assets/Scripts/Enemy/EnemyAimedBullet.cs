@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class EnemyAimedBullet : MonoBehaviour
 {
 
     [SerializeField]
@@ -13,15 +13,11 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, speed, 0);
+        var dir = Vector3.zero;
+        dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+        Rigidbody bullet = gameObject.GetComponent<Rigidbody>();
+        bullet.velocity = new Vector3(dir.normalized.x * speed, dir.normalized.y * speed, 0);
     }
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    */
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Wall")

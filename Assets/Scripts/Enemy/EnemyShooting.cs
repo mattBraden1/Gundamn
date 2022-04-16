@@ -4,38 +4,30 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    public GameObject Enemy;
-    public Transform player;
     [SerializeField]
-    public float speed = 1;
-    public float bulletImpulse = 20.0f;
+    public GameObject projectile;
     [SerializeField]
-    private bool onRange = true;
-    public Rigidbody projectile;
+    private float fireRate = 20;
+    private float interval;
     void Start()
     {
+        interval = fireRate;
     }
 
     void Shoot()
     {
-
-        if (onRange)
-        {
-            var dir = Vector3.zero;
-            dir = player.transform.position - transform.position;
-            Rigidbody bullet = gameObject.GetComponent<Rigidbody>();
-            bullet.velocity = new Vector3(dir.normalized.x * speed, dir.normalized.y * speed, 0);
-
-            Destroy(gameObject, 2);
-        }
-
-
+        Instantiate(projectile, new Vector3(transform.position.x, transform.position.y - 1.5f, transform.position.z), transform.rotation);
     }
 
     void Update()
     {
-        //onRange = Vector3.Distance(transform.position, player.position) < range;
-        Shoot();
+        if (interval >= fireRate)
+        {
+            Shoot();
+            interval = 0;
+        }
+        else
+            interval += 1;
     }
 
 
