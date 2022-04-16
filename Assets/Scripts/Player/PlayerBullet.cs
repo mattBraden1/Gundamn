@@ -7,6 +7,8 @@ public class PlayerBullet : MonoBehaviour
 
     [SerializeField]
     private float speed = 20;
+    [SerializeField]
+    private float damage = 25;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,10 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
             Destroy(gameObject);
+        else if(collision.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
