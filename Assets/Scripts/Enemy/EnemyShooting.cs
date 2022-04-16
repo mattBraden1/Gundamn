@@ -8,10 +8,11 @@ public class EnemyShooting : MonoBehaviour
     public GameObject projectile;
     [SerializeField]
     private float fireRate = 20;
-    private float interval;
+    //private float interval;
+    private bool isShooting = true, startCoroutine = false;
     void Start()
     {
-        interval = fireRate;
+        
     }
 
     void Shoot()
@@ -21,14 +22,20 @@ public class EnemyShooting : MonoBehaviour
 
     void Update()
     {
-        if (interval >= fireRate)
+        if (isShooting)
         {
             Shoot();
-            interval = 0;
+            isShooting = false;
         }
-        else
-            interval += 1;
+        else if (!startCoroutine)
+            StartCoroutine(WaitForTime(fireRate));
     }
-
+    IEnumerator WaitForTime(float timeToWait)
+    {
+        startCoroutine = true;
+        yield return new WaitForSeconds(timeToWait);
+        isShooting = true;
+        startCoroutine = false;
+    }
 
 }
