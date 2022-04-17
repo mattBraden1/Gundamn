@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
-    }/*
+    }
     public void takeDamage(float damage)
     {
         if (damage <= currentHealth)
@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
             currentHealth = 0;
         if (currentHealth <= 0)
             Destroy(gameObject);
-    }*/
+    }
     public float getMaxHealth()
     {
         return health;

@@ -287,6 +287,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &60713192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6629561512238376129, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+  m_PrefabInstance: {fileID: 367791186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &60713193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60713192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &97518181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561512726575854, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -322,7 +340,6 @@ GameObject:
   - component: {fileID: 263226015}
   - component: {fileID: 263226014}
   - component: {fileID: 263226013}
-  - component: {fileID: 263226012}
   - component: {fileID: 263226011}
   m_Layer: 0
   m_Name: Enemy (3)
@@ -359,20 +376,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &263226012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263226009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &263226013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -734,6 +737,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6629561512238376129, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: m_TagString
+      value: ChitinHealth
+      objectReference: {fileID: 0}
     - target: {fileID: 6629561512726575853, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -764,6 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6629561512129060268, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+    - {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
 --- !u!1 &439985538 stripped
 GameObject:
@@ -800,7 +808,6 @@ GameObject:
   - component: {fileID: 710078533}
   - component: {fileID: 710078532}
   - component: {fileID: 710078531}
-  - component: {fileID: 710078530}
   - component: {fileID: 710078529}
   m_Layer: 0
   m_Name: Enemy (5)
@@ -837,20 +844,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &710078530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710078527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &710078531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -978,7 +971,6 @@ GameObject:
   - component: {fileID: 887226152}
   - component: {fileID: 887226151}
   - component: {fileID: 887226150}
-  - component: {fileID: 887226149}
   - component: {fileID: 887226148}
   m_Layer: 0
   m_Name: Enemy (2)
@@ -1015,20 +1007,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &887226149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887226146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &887226150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1467,7 +1445,6 @@ GameObject:
   - component: {fileID: 1241188397}
   - component: {fileID: 1241188396}
   - component: {fileID: 1241188395}
-  - component: {fileID: 1241188394}
   - component: {fileID: 1241188393}
   m_Layer: 0
   m_Name: Enemy (1)
@@ -1504,20 +1481,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1241188394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241188391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &1241188395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1822,7 +1785,6 @@ GameObject:
   - component: {fileID: 1433643644}
   - component: {fileID: 1433643643}
   - component: {fileID: 1433643642}
-  - component: {fileID: 1433643641}
   - component: {fileID: 1433643640}
   m_Layer: 0
   m_Name: Enemy (6)
@@ -1859,20 +1821,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1433643641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433643638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &1433643642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2084,7 +2032,6 @@ GameObject:
   - component: {fileID: 1742251810}
   - component: {fileID: 1742251809}
   - component: {fileID: 1742251808}
-  - component: {fileID: 1742251807}
   - component: {fileID: 1742251806}
   m_Layer: 0
   m_Name: Enemy (4)
@@ -2121,20 +2068,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1742251807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742251804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  isChitinous: 1
 --- !u!54 &1742251808
 Rigidbody:
   m_ObjectHideFlags: 0
