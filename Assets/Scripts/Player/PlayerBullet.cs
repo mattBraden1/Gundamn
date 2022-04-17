@@ -31,5 +31,18 @@ public class PlayerBullet : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
             Destroy(gameObject);
         }
+        else if(collision.gameObject.tag == "ChitinBoss")
+        {
+            try 
+            {
+                GameObject.FindGameObjectWithTag("ChitinHealth").GetComponent<EnemyHealth>().takeDamage(damage);
+            }
+            
+            catch
+            {
+                //:)
+            }
+
+        }
     }
 }
