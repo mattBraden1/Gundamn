@@ -16,6 +16,8 @@ public class EnemyShooting : MonoBehaviour
     private bool burst = false;
     [SerializeField]
     private int burstShots = 1;
+    [SerializeField]
+    private float burstInterval = .5f;
     private int curShots;
 
     private void Start()
@@ -39,7 +41,7 @@ public class EnemyShooting : MonoBehaviour
         {
             Shoot();
             curShots--;
-            StartCoroutine(WaitForTime(.5f));
+            StartCoroutine(WaitForTime(burstInterval));
         }
         else if (!startCoroutine)
         {

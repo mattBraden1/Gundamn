@@ -249,9 +249,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!1 &289136929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561512944018074, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -369,6 +370,10 @@ PrefabInstance:
     - target: {fileID: 6629561512129060258, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
@@ -827,6 +832,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
+      objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1014,9 +1023,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!1 &919064885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561512129060269, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -1027,6 +1037,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6629561512129060257, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
   m_PrefabInstance: {fileID: 377893909}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919064887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+  m_PrefabInstance: {fileID: 377893909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919064885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &919064888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919064885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3539ce507d93545bd0d58ef6848903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  irisIcon: {fileID: 333274382}
+  health: {fileID: 919064887}
 --- !u!135 &919064891
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1054,9 +1089,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: -1.5
   projectile: {fileID: 3714409750904631600, guid: 27099e8251dacc246a35e9ff04777f1f, type: 3}
-  fireRate: 10
+  fireRate: 5
   burst: 0
   burstShots: 1
+  burstInterval: 0.5
+--- !u!114 &919064895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919064885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c94f4a79cdde9c468946675032c30fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 30
+  laser: {fileID: 1845861589853587833, guid: 59a0151b178130442a06918f76ac8167, type: 3}
 --- !u!1 &919336420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561512129060269, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -1089,9 +1139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!4 &930676568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6629561512129060257, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -1309,9 +1360,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!1 &1117550323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,9 +1494,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!1 &1181322788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561513657638186, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -1715,6 +1768,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
+      objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1977,6 +2034,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
+      objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2062,6 +2123,10 @@ PrefabInstance:
     - target: {fileID: 6629561512129060258, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
@@ -2230,6 +2295,10 @@ PrefabInstance:
     - target: {fileID: 6629561512129060258, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512129060268, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Enabled
@@ -2402,6 +2471,10 @@ PrefabInstance:
     - target: {fileID: 6629561512129060258, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060261, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: health
+      value: 9999999
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_RootOrder
@@ -2619,9 +2692,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yOffset: 0
   projectile: {fileID: 7096351915467102263, guid: 540178de07627d44083d57dc3e2df4bd, type: 3}
-  fireRate: 1
+  fireRate: 3
   burst: 1
   burstShots: 3
+  burstInterval: 0.5
 --- !u!1 &1915765572
 GameObject:
   m_ObjectHideFlags: 0
