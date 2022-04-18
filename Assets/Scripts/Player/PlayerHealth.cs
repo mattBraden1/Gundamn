@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = health;
-        currentIFrame = iFrame;
+        currentIFrame = -100;
     }
     private void Update()
     {
