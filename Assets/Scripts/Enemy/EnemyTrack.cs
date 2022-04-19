@@ -42,7 +42,6 @@ public class EnemyTrack : MonoBehaviour
                 }
                 if (points[curPos].GetComponent<TrackVars>().shootAtSpot() && projectile != null)
                 {
-                    Debug.Log("Reminder: Add shoot functionality to track");
                     Instantiate(projectile, new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z), transform.rotation);
                 }
                 if (points[curPos].GetComponent<TrackVars>().pauseAtSpot())

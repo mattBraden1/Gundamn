@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4972762501470989378, guid: da6934ffa244d5f409c7529aa5e28795, type: 3}
   m_PrefabInstance: {fileID: 765426953}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 765426954}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc822b108320898478a1d5b62e1edf34, type: 3}
@@ -668,6 +668,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da6934ffa244d5f409c7529aa5e28795, type: 3}
+--- !u!1 &765426954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 727421790341173550, guid: da6934ffa244d5f409c7529aa5e28795, type: 3}
+  m_PrefabInstance: {fileID: 765426953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &765426955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 727421790341173541, guid: da6934ffa244d5f409c7529aa5e28795, type: 3}
+  m_PrefabInstance: {fileID: 765426953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765426954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdbac4dfd7c04b45bef324e42797614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &765426956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765426954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5110c53ed3f58a74aad632ae0a39d962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 155588093}
+  canvas: {fileID: 1915765575}
+  gameOver: {fileID: 3169958155533336360, guid: f32fc257fbe18cd43ab2f26edf65f3d0, type: 3}
+  ship: {fileID: 1605180150}
+  playerShooting: {fileID: 765426955}
 --- !u!1 &785081153
 GameObject:
   m_ObjectHideFlags: 0
