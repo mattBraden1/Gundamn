@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DestroyEmptyShotgun : MonoBehaviour
 {
+    [SerializeField]
+    private float timeToDestroy = 5;
     void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, timeToDestroy);
     }
 }
