@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e3fca896cd64645980ef27a209ee95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 5000
 --- !u!1 &97518181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6629561512726575854, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: 1
   timeToWait: 0.5
-  shoot: 0
+  shoot: 1
   destroy: 0
 --- !u!1 &263226009
 GameObject:
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -411,6 +412,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &263226015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,13 +647,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1671109766880119583, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: shoot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5249109263728942595, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 5249109263728942595, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512129060258, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_Mesh
@@ -665,6 +671,10 @@ PrefabInstance:
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6629561512129060263, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1976937792484177336, guid: b5d6074e6902f8e4db757cd4a244b4c5, type: 3}
     - target: {fileID: 6629561512129060263, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: points.Array.size
       value: 5
@@ -691,11 +701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512238376128, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -743,19 +753,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512726575853, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512726575853, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512944018073, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512944018073, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 6629561512944018073, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -763,11 +773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6629561513657638185, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 6629561513657638185, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6629561512129060268, guid: 968c36d852104e84690f35c62d43ea50, type: 3}
@@ -792,7 +802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: 1
   timeToWait: 0.5
-  shoot: 0
+  shoot: 1
   destroy: 0
 --- !u!1 &710078527
 GameObject:
@@ -872,6 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -879,6 +890,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &710078533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -1042,6 +1055,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &887226152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,6 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -1516,6 +1531,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &1241188397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -1856,6 +1873,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &1433643644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,6 +2114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e199737f07ef45a19ea6a3cac40f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yOffset: -1.5
   points:
   - {fileID: 439985538}
   - {fileID: 97518181}
@@ -2103,6 +2122,7 @@ MonoBehaviour:
   - {fileID: 1004610670}
   - {fileID: 439985538}
   speed: 15
+  projectile: {fileID: 0}
 --- !u!114 &1742251810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,7 +2286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: 1
   timeToWait: 0.5
-  shoot: 0
+  shoot: 1
   destroy: 0
 --- !u!1 &1879953025
 GameObject:

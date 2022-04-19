@@ -5,11 +5,15 @@ using UnityEngine;
 public class EnemyTrack : MonoBehaviour
 {
     [SerializeField]
+    private float yOffset = -1.5f;
+    [SerializeField]
     private GameObject[] points;
     [SerializeField]
     private float speed = 1.0f;
     private int curPos = 0;
     private bool continueRunning = true;
+    [SerializeField]
+    public GameObject projectile;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +40,11 @@ public class EnemyTrack : MonoBehaviour
                         Destroy(obj);
                     Destroy(gameObject);*/
                 }
-                if (points[curPos].GetComponent<TrackVars>().shootAtSpot())
+                if (points[curPos].GetComponent<TrackVars>().shootAtSpot() && projectile != null)
+                {
                     Debug.Log("Reminder: Add shoot functionality to track");
+                    Instantiate(projectile, new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z), transform.rotation);
+                }
                 if (points[curPos].GetComponent<TrackVars>().pauseAtSpot())
                     StartCoroutine(WaitForTime(points[curPos].GetComponent<TrackVars>().waitTime()));
                 wrapPos();
