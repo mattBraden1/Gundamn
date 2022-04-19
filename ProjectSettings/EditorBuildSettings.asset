@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IrisBossScene.unity
     guid: 3273a84d1e2e50c42b21e47ef531e2ad
+  - enabled: 1
+    path: Assets/Scenes/ChitinBossScene.unity
+    guid: 5555e1b479b8b994f9e7cfa628752ee8
   m_configObjects: {}
