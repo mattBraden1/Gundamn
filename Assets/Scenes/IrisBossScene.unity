@@ -1982,6 +1982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 919064887}
   winScreenUI: {fileID: 1307544884}
+  playerDeath: {fileID: 0}
 --- !u!114 &1307544887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3477,6 +3478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 919064887}
   winScreenUI: {fileID: 1307544884}
+  playerDeath: {fileID: 765426956}
 --- !u!1 &1928088035
 GameObject:
   m_ObjectHideFlags: 0

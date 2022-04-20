@@ -13,6 +13,7 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField]
     private SpriteRenderer ship;
     private bool isDead = false;
+    private bool wonGame = false;
     [SerializeField]
     private PlayerShooting playerShooting;
     // Start is called before the first frame update
@@ -24,12 +25,17 @@ public class PlayerDeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth.getCurrentHealth() <= 0 && !isDead)
+        if (playerHealth.getCurrentHealth() <= 0 && !isDead && !wonGame)
         {
             isDead = true;
             Instantiate(gameOver,canvas.transform);
             Destroy(ship.gameObject);
             playerShooting.shootingEnabled(false);
         }
+    }
+
+    public void hasWon(bool a)
+    {
+        wonGame = a;
     }
 }

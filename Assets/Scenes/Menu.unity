@@ -596,7 +596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 427}
+  m_AnchoredPosition: {x: -85, y: 381}
   m_SizeDelta: {x: -1915.4224, y: -1268.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436035192
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -210.20947, y: 0, z: -416.56165, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: use wasd or arrow keys to move and z to shoot
+  m_text: use wasd or arrow keys to move and z or left click to shoot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 911203bccab4bb9438dc169a8457487a, type: 2}
   m_sharedMaterial: {fileID: -2765729471506409684, guid: 911203bccab4bb9438dc169a8457487a, type: 2}

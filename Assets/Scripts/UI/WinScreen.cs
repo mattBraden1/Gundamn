@@ -8,6 +8,8 @@ public class WinScreen : MonoBehaviour
     [SerializeField]
     private EnemyHealth enemyHealth;
     public GameObject winScreenUI;
+    [SerializeField]
+    private PlayerDeath playerDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class WinScreen : MonoBehaviour
     {
         if (enemyHealth.getCurrentHealth() == 0)
         {
+            playerDeath.hasWon(true);
             winScreenUI.SetActive(true);
         }
 
